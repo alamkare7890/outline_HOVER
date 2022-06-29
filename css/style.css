@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+
+
+}
+
+ul{
+    list-style-type: none;
+
+}
+
+li{
+    margin-bottom: 15px;
+    padding: 15px 25px;
+    border: 1px solid #dbdbdb;
+    position: relative;
+    z-index: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+}
+a{
+    text-decoration: none;
+    color: blueviolet;
+    transition: all 0.3s ease;
+    z-index: 0;
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+}
+li:hover a{
+    color: brown;
+
+}
+li:hover{
+    background-color: #dbdbdb;
+
+}
+li::before, li::after{
+    content: "";
+    width: 0;
+    height: 3%;   
+    position: absolute;   
+    z-index: -1;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+
+a::before, a::after{
+    content: "";
+    width: 1%;
+    height: 0;   
+    position: absolute;   
+    z-index: -1;
+    cursor: pointer;
+    transition: all 0.7s ease;
+
+
+}
+li:before{
+    left: 0;
+    top: 0;
+
+}
+li:hover:before{
+    width: 100%;
+    background: linear-gradient(45deg,red, cornflowerblue,seagreen);
+
+}
+li::after{
+    bottom: 0;
+    right: 0;
+}
+li:hover:after{
+    background: linear-gradient(45deg,red, cornflowerblue,seagreen);
+    width: 100%;
+
+}
+
+
+a::before{
+    right: 0;
+    top: 0;
+}
+a::after{
+    left: 0;
+    bottom: 0;
+}
+li:hover a:before {
+    background: linear-gradient(45deg,red, cornflowerblue,seagreen);
+    height: 100%;
+}
+li:hover a:after {
+    background: linear-gradient(45deg,red, cornflowerblue,seagreen);
+    height: 100%;
+
+
+}
